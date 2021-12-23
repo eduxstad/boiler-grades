@@ -1,5 +1,6 @@
 //index.js - boilder-grades
 //simple node based webserver and api
+//postgres backend for db
 
 const express = require('express');
 const app = express();
