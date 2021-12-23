@@ -4,6 +4,26 @@
 const express = require('express');
 const app = express();
 
+const { Client } = require('pg');
+
+const DB_URL = process.env.DATABASE_URL 
+  || 'postgresql://localhost:5432/testDatabase';
+const DB_SSL = process.env.DATABASE_URL ? true : false;
+console.log("Connecting to database at URL: %s", DB_URL);
+const client = new Client({
+  connectionString: DB_URL,
+  ssl: DB_SSL
+});
+
+client.connect();
+
+client.query('SELECT table_schema,table_name FROM information_schema.tables;', 
+  (err, res) => {
+  if (err) throw err;
+  console.log("Successfully connected to database"); 
+  client.end();
+});
+
 //setup homepage
 app.use('/', express.static('index'));
 
