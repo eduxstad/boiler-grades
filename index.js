@@ -8,7 +8,7 @@ const { Client } = require('pg');
 
 const DB_URL = process.env.DATABASE_URL 
   || 'postgresql://localhost:5432/testDatabase';
-const DB_SSL = process.env.DATABASE_URL ? true : false;
+const DB_SSL = process.env.DATABASE_URL ? { rejectUnauthroized: false } : false;
 console.log("Connecting to database at URL: %s", DB_URL);
 const client = new Client({
   connectionString: DB_URL,
