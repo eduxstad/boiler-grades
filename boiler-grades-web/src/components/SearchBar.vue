@@ -1,5 +1,5 @@
 <template>
-<v-container>
+<v-container class="">
     <v-autocomplete
         solo
         auto-select-first
@@ -12,6 +12,11 @@
         label="Search by class or instructor"
     >
     </v-autocomplete>
+    <v-btn-toggle color="primary" >
+    <v-btn class="mx-4 mt-n3" @click="clickedShowLegend" >
+        Legend
+    </v-btn>
+    </v-btn-toggle>
     <v-tooltip bottom open-delay='500'>
         <template v-slot:activator="{ on, attrs }">
             <div id="test" class="d-inline-block" v-bind="attrs" v-on="on">
@@ -24,13 +29,17 @@
         </template>
         <span>Include sections from Spring 2020, Summer 2020, Fall 2020, and Spring 2021</span>
     </v-tooltip>
+    <Legend v-if="showLegend" class="ma-2"/> 
     <InstructorHeader v-if="classRows.length > 0" v-bind:sectionlabel="sectionlabel"/>
     <ClassRow v-for="row in classRows" :key="row.label" v-bind:classrowdata="row"/>
-    <v-container v-if="classRows.length == 0 && !isLoading" class="font-weight-light px-auto">
+    <v-container v-if="classRows.length == 0 && !isLoading" class="font-weight-light px-auto pt-8">
+        <v-row class="justify-center">
         No results found. Try searching 'MA16100' or 'Peroulis'
+        </v-row>
     </v-container>
     <v-layout justify-center>
     <v-progress-circular
+        class="pt-8"
         v-if="isLoading"
         :size="70"
         :width="7"
@@ -44,6 +53,7 @@
 <script>
 import ClassRow from './ClassRow';
 import InstructorHeader from './InstructorHeader';
+import Legend from './Legend';
 export default {
     name: 'SearchBar',
     setup () {
@@ -61,6 +71,8 @@ export default {
             classRows: [],
             sectionlabel: null,
             includePandemic: true,
+            legendLabel: 'Show Legend',
+            showLegend: false,
     }),
 
     created() {
@@ -78,15 +90,17 @@ export default {
                     console.log(err)
                 })
         },
-        getEntryDebounced() {
-            clearTimeout(this._timerId)
-
-            this._timerId = setTimeout(() => {
-                if (this.items.includes(this.search)) {
-                    //do something
-                    //console.log(this.search)
-                }
-            }, 500)
+        clickedShowLegend() {
+            if (this.showLegend) {
+                this.showLegend = false;
+            } else {
+                this.showLegend = true;
+            }
+            if(this.legendLabel == 'Show Legend') {
+                this.legendLabel = 'Hide Legend'
+            } else {
+                this.legendLabel = 'Show Legend'
+            }
         },
         sectionGPA(section) {
             let a_plus = parseFloat(section.a_plus) || 0;
@@ -257,7 +271,6 @@ export default {
             }
         },
         classSort (a,b) {
-            console.log(a.label + " " + b.label);
             //don't sort the first section
             if (a.label == 'All Sections' || b.label == 'All Sections') return 0; 
             if (a.gpa < b.gpa) {
@@ -328,6 +341,7 @@ export default {
     components: {
         ClassRow,
         InstructorHeader,
+        Legend,
     },
 }
 </script>

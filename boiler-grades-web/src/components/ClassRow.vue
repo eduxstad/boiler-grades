@@ -16,6 +16,7 @@
                     top
                     offset-y
                     z-index="100000"
+                    nudge-top="20"
                 >
                 <template v-slot:activator="{on, attrs}">
                 <div 
@@ -74,7 +75,7 @@ export default {
     },
     methods: {
         generateGraph() {
-            d3.select(this.graphId).html("").attr("ref", "svgGraph");
+            d3.select(this.graphId).html("");
             const xpadding = 20;
             const height = 25;
             const yoffset = 5;
@@ -97,8 +98,6 @@ export default {
             let classrowdata = this.classrowdata;
 
             var drawGPABox = function(low, high, a, classrowdata) {
-                //console.log("Min: " + low);
-                //console.log("Max: " + high);
                 svg.append("rect")
                 .attr("rx", 8)
                 .attr("ry", 8)
