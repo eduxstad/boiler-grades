@@ -26,7 +26,7 @@ client.query('SELECT table_schema,table_name FROM information_schema.tables;',
 });
 
 //setup homepage
-app.use('/', express.static('index'));
+app.use('/', express.static('boiler-grades-web/dist'));
 
 app.get('/api/grades', async function (req, res) {
   let instructor = req.query.instructor;
