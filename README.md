@@ -45,7 +45,7 @@ Updating the dataset with more recent data will require filing a new [Public Rec
 > Thank you,
 > Erik Duxstad
 
-It took about two months for Purdue to retrieve the data. Once I received the data I converted it to CSV and sanitized it with `grades.py`. 
+It took about two months for Purdue to retrieve the data. Once I received the data I converted it to CSV and sanitized it with `grades.py`. If you request updated data from Purdue feel free to create an issue/pull request and I will add the additional data to the database. 
 
 ## License
 This project is licensed under GNU GPL v3.
