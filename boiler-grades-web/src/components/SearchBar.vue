@@ -10,10 +10,11 @@
         :items="items"
         :search-input.sync="search"
         label="Search by class or instructor"
+        class="mb-n4"
     >
     </v-autocomplete>
     <v-btn-toggle color="primary" >
-    <v-btn class="mx-4 mt-n3" @click="clickedShowLegend" >
+    <v-btn class="mx-4"  @click="clickedShowLegend" >
         Legend
     </v-btn>
     </v-btn-toggle>
@@ -23,7 +24,7 @@
                 <v-checkbox v-bind="attrs" v-on="on"
                 v-model="includePandemic"
                 :label="`Include pandemic semesters`"
-                class="pt-0 mt-n3 mb-n4 pl-2"
+                class="pt-0 pl-2"
                 ></v-checkbox>
         </div>
         </template>

@@ -10,7 +10,7 @@
               Data Warning: Correlation is not causation. Historical averages may not predict 
               future grades. Speak to an advisor before making academic decisions. 
             </v-alert>
-            <v-container class="mx-6 mt-8">
+            <v-container class="mt-8">
             <h2>Data</h2>
             <p>    
             This website uses data provided by Purdue through a 
@@ -20,7 +20,7 @@
             <a target="_blank" href="https://purdue0-my.sharepoint.com/:x:/g/personal/eduxstad_purdue_edu/EdC_vaVTb5RBo3zM-guzJjEBYpku8Qz6sRWyAjFwKvcYEw?e=X9nPrA">
             online</a>
              or via 
-            <a target="_blank" href="">
+            <a target="_blank" href="https://github.com/eduxstad/boiler-grades/raw/main/grades.xlsx">
             download (7 MB)</a>
             . It contains
             data from all courses at the West Lafayette campus with more than 10 students
@@ -44,10 +44,10 @@
             <h2>Code</h2>
             <p>This website is open source. If you'd like to report or fix a bug, 
             suggest an improvement or update the dataset please visit the
-            <a target="_blank" href=""> 
+            <a target="_blank" href="https://github.com/eduxstad/boiler-grades"> 
             GitHub repository</a>.
             </p>
-            <p>Built with 🚂 by <a target="_blank" href="https://github.com/eduxstad">eduxstad</a>.</p>
+            <p>Built with 🚂🔨 by <a target="_blank" href="https://github.com/eduxstad">eduxstad</a>.</p>
             </v-container>
           </v-col>
         </v-row>
