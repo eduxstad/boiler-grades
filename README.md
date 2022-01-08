@@ -17,6 +17,7 @@ To install and run a local version of the server run (you'll need to configure p
 ```
 $ npm install && node index.js
 ```
+Make sure to change the proxy server in `boiler-grades-web/vue.config.js`.
 ## Bugs
 To report a bug please [create a new issue](https://github.com/eduxstad/boiler-grades/issues/new).
 

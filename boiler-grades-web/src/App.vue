@@ -7,8 +7,8 @@
           <v-col sm="12" md="12" lg="12" xl="8" class="content">
             <SearchBar/>
             <v-alert class="mx-8 mt-16" type='warning' colored-border elevation="1" border="left">
-              Data Warning: Correlation is not causation. Historical averages may not predict 
-              future grades. Speak to an advisor before making academic decisions. 
+              Warning: Correlation is not causation. Historical averages may not predict 
+              future grades. Speak to an advisor before making academically impactful decisions. 
             </v-alert>
             <v-container class="mt-8">
             <h2>Data</h2>
