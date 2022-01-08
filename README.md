@@ -27,7 +27,9 @@ Updating the dataset with more recent data will require filing a new [Public Rec
 > Hello my name is Erik Duxstad,
 > 
 > Address: [ADDRESS]
+> 
 > Email: [email]@purdue.edu
+> 
 > Phone Number: [NUMBER]
 > 
 > I am requesting the grade distributions by percent and/or letter grade, for every class and instructor for the last five years at the West Lafayette Campus of Purdue 
