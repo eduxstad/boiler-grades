@@ -25,6 +25,18 @@ client.query('SELECT table_schema,table_name FROM information_schema.tables;',
   //client.end();
 });
 
+//redirect to https
+app.use((req, res, next) => {
+    if (process.env.NODE_ENV === 'production') {
+        if (req.headers['x-forwarded-proto'] !== 'https')
+            // the statement for performing our redirection
+            return res.redirect('https://' + req.headers.host + req.url);
+        else
+            return next();
+    } else
+        return next();
+});
+
 //setup homepage
 app.use('/', express.static('boiler-grades-web/dist'));
 
