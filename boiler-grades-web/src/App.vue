@@ -24,7 +24,7 @@
             download (7 MB)</a>
             . It contains
             data from all courses at the West Lafayette campus with more than 10 students
-            from Summer 2016 to Summer 2021. Some courses may not be shown if they only 
+            from Summer 2016 to Fall 2021. Some courses may not be shown if they only 
             assigned non-weighted grades (such as pass/fail).  
             </p>
             <h2>Attribution</h2>
@@ -47,7 +47,7 @@
             <a target="_blank" href="https://github.com/eduxstad/boiler-grades"> 
             GitHub repository</a>.
             </p>
-            <p>Built with 🚂🔨 by <a target="_blank" href="https://github.com/eduxstad">eduxstad</a>.</p>
+            <p>Built with 🚂🔨 by <a target="_blank" href="https://github.com/eduxstad">eduxstad</a>. Fall 2021 Data Provided by Joey Diesen.</p>
             </v-container>
           </v-col>
         </v-row>
