@@ -9,6 +9,7 @@
         :loading="loading"
         :items="items"
         :search-input.sync="search"
+        :filter="filter"
         label="Search by class or instructor"
         class="mb-n4"
     >
@@ -81,6 +82,13 @@ export default {
     },
     
     methods: {
+        filter(item, queryText, itemText) {
+            const testExp = new RegExp(
+                `.*${queryText.split("").join(".*")}.*`,
+                "i"
+            )
+            return testExp.test(itemText)
+        },
         getItems() {
             fetch('/api/indexes')
                 .then(res => res.json())
