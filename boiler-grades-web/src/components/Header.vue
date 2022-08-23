@@ -29,7 +29,7 @@ export default {
 }
 
 .pagetitle {
-    font-family: 'Franklin Gothic';
+    font-family: 'Garamond';
 }
 
 .imagefilter {
