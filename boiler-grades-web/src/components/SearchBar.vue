@@ -8,8 +8,8 @@
         v-model="select"
         :loading="loading"
         :items="items"
-        :search-input.sync="search"
         :filter="filter"
+        :search-input.sync="search"
         label="Search by class or instructor"
         class="mb-n4"
     >
@@ -83,11 +83,18 @@ export default {
     
     methods: {
         filter(item, queryText, itemText) {
-            const testExp = new RegExp(
-                `.*${queryText.split("").join(".*")}.*`,
-                "i"
-            )
-            return testExp.test(itemText)
+            itemText = itemText.replace(",", "").replace(".", "");
+            queryText = queryText.replace(",", "").replace(".", "");
+            //remove spaces if first two characters are capital (probably a course number) 
+            if (queryText.charCodeAt(0) >= 65 && queryText.charCodeAt(0) <= 90 
+                && queryText.charCodeAt(1) >= 65 && queryText.charCodeAt(1) <= 90) 
+            {
+                itemText = itemText.replace(/\s/g, '');
+                queryText = queryText.replace(/\s/g, '');
+            }
+            if (itemText.toLocaleLowerCase().indexOf(queryText.toLocaleLowerCase()) > -1 ) {
+                return true;
+            }
         },
         getItems() {
             fetch('/api/indexes')
