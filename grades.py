@@ -4,13 +4,14 @@ import json
 # ---------------
 # CONFIG SETTINGS
 # ---------------
-grades_input_csv = 'fall2021.csv'
-grades_output_csv = 'fall2021_db.csv'
+grades_input_csv = 'summer2022.csv'
+grades_output_csv = 'summer2022_db.csv'
 course_information_json = 'course_information.json'
 # ----------
 # END CONFIG
 # ----------
-print(f'This script reads from {grades_input_csv}, overwrites to {grades_output_csv}, and overwrites lists of subjects, courses, and instructors  to {course_information_json}.')
+print(f'This script reads from {grades_input_csv}, overwrites to {grades_output_csv}, and overwrites lists of subjects, courses, and instructors to {course_information_json}.')
+print(f'The course information file is not used and may be discarded (indexes are generated from the database itself).')
 input('Press any key to continue or CTRL-C to exit . . .')
 
 subjects = set()

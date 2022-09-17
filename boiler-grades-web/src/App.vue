@@ -36,7 +36,7 @@
             Wade Fagen-Ulmschneider</a>
              (from the University of Illinois), and 
             <a target="_blank" href="https://austingwalters.com/foia-requesting-100-universities/">
-            Austin G. Walters</a>. Fall 2021 data was provided by Joey Diesen.
+            Austin G. Walters</a>. Fall 2021 and Spring 2022 data was provided by Joey Diesen.
             </p>
             <h2>Code</h2>
             <p>This website is open source. If you'd like to report or fix a bug, 
