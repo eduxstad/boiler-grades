@@ -17,7 +17,7 @@
             <a target="_blank" href="https://www.purdue.edu/legalcounsel/public/index.html">Public Records</a> 
             request.
             You can access the raw data 
-            <a target="_blank" href="https://purdue0-my.sharepoint.com/:x:/g/personal/eduxstad_purdue_edu/EdC_vaVTb5RBo3zM-guzJjEBYpku8Qz6sRWyAjFwKvcYEw?e=X9nPrA">
+            <a target="_blank" href="https://purdue0-my.sharepoint.com/:x:/g/personal/eduxstad_purdue_edu/EQSIF2KgKedMhgMULoAUAv8BVcQggAN8SQwJpn9iV7jP0A?e=bPJvYS">
             online</a>
              or via 
             <a target="_blank" href="https://github.com/eduxstad/boiler-grades/raw/main/grades.xlsx">
