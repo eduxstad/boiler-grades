@@ -45,10 +45,10 @@
     </v-tooltip>
     <Legend v-if="showLegend" class="ma-2"/> 
     <InstructorHeader v-if="classRows.length > 0" v-bind:sectionlabel="sectionlabel"/>
-    <ClassRow v-for="row in classRows" :key="row.label" v-bind:classrowdata="row"/>
+    <ClassRow v-for="row in classRows" :key="row.id" v-bind:classrowdata="row"/>
     <v-container v-if="classRows.length == 0 && !isLoading" class="font-weight-light px-auto pt-8">
         <v-row class="justify-center">
-        No results found. Try searching 'MA16100' or 'Peroulis'
+        No results found. Try searching 'MA16100' or 'Turkstra'
         </v-row>
     </v-container>
     <v-layout justify-center>
@@ -178,6 +178,7 @@ export default {
             classes['all'] = { label: 'All Sections',
                                 course_desc: 'All',
                                 instructor: 'All',
+                                id: 'all',
                                 count: 0,
                                 a_plus: 0,
                                 a: 0,
@@ -199,7 +200,7 @@ export default {
                     //ignore section if it's a pandemic semester
                     continue;
                 }
-                if (section.title.includes('Honors') && !this.includeHonors) {
+                if (section.title.includes('Honor') && !this.includeHonors) {
                     continue;
                 }
                 //check if gpa is zero (don't add if so)
@@ -228,7 +229,7 @@ export default {
                 if (instructor) {
                     //add to course of instructor
                     id = section.subject + section.course_num.toString() + section.title;
-                    if (section.title.includes('Honors')) {
+                    if (section.title.includes('Honor')) {
                         label = section.subject + " " + section.course_num.toString() + ' (Honors)';
                     } else {
                         label = section.subject + " " + section.course_num.toString();
@@ -238,7 +239,7 @@ export default {
                     //add to specific instructor
                     classes['all'].course_desc = section.title;
                     id = section.instructor + section.title;
-                    if (section.title.includes('Honors')) {
+                    if (section.title.includes('Honor')) {
                         label = section.instructor + ' (Honors)';
                     } else {
                         label = section.instructor;
@@ -250,6 +251,7 @@ export default {
                                 course_desc: section.title,
                                 instructor: section.instructor,
                                 count: 1,
+                                id: id,
                                 a_plus: (parseFloat(section.a_plus) || 0),
                                 a: (parseFloat(section.a) || 0),
                                 a_minus: (parseFloat(section.a_minus) || 0),
