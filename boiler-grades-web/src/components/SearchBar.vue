@@ -31,18 +31,6 @@
         </template>
         <span>Include sections from Spring 2020, Summer 2020, Fall 2020, and Spring 2021</span>
     </v-tooltip>
-    <v-tooltip bottom open-delay='500'>
-        <template v-slot:activator="{ on, attrs }">
-            <div id="test2" class="d-inline-block" v-bind="attrs" v-on="on">
-                <v-checkbox v-bind="attrs" v-on="on"
-                v-model="includeHonors"
-                :label="`Include honors sections`"
-                class="pt-0 pl-2"
-                ></v-checkbox>
-        </div>
-        </template>
-        <span>Honors sections are generally small and can skew the GPA</span>
-    </v-tooltip>
     <Legend v-if="showLegend" class="ma-2"/> 
     <InstructorHeader v-if="classRows.length > 0" v-bind:sectionlabel="sectionlabel"/>
     <ClassRow v-for="row in classRows" :key="row.label" v-bind:classrowdata="row"/>
@@ -85,7 +73,6 @@ export default {
             classRows: [],
             sectionlabel: null,
             includePandemic: true,
-            includeHonors: false,
             legendLabel: 'Show Legend',
             showLegend: false,
     }),
@@ -199,9 +186,6 @@ export default {
                     //ignore section if it's a pandemic semester
                     continue;
                 }
-                if (section.title.includes('Honors') && !this.includeHonors) {
-                    continue;
-                }
                 //check if gpa is zero (don't add if so)
                 if (this.sectionGPA(section) == 0) { continue; }
                 //add to all
@@ -227,22 +211,14 @@ export default {
                 let label;
                 if (instructor) {
                     //add to course of instructor
-                    id = section.subject + section.course_num.toString() + section.title;
-                    if (section.title.includes('Honors')) {
-                        label = section.subject + " " + section.course_num.toString() + ' (Honors)';
-                    } else {
-                        label = section.subject + " " + section.course_num.toString();
-                      }
+                    id = section.subject + section.course_num.toString();
+                    label = section.subject + " " + section.course_num.toString();
                     classes['all'].instructor = section.instructor;
                 } else {
                     //add to specific instructor
                     classes['all'].course_desc = section.title;
-                    id = section.instructor + section.title;
-                    if (section.title.includes('Honors')) {
-                        label = section.instructor + ' (Honors)';
-                    } else {
-                        label = section.instructor;
-                    }
+                    id = section.instructor;
+                    label = section.instructor;
                 }
                 if(!(id in classes)) { //new id
                     classes[id] = { 
@@ -376,9 +352,6 @@ export default {
         includePandemic() {
            this.updateSections(this.search); 
         },
-        includeHonors() {
-            this.updateSections(this.search);
-        }
     },
     
     components: {
