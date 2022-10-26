@@ -20,7 +20,7 @@
                 >
                 <template v-slot:activator="{on, attrs}">
                 <div 
-                    v-bind:id="classrowdata.label.replace(/\W/g, '')" 
+                    v-bind:id="classrowdata.id.replace(/\W/g, '')" 
                     ref="svgGraph"
                     v-on="on"
                     v-bind="attrs"
@@ -63,7 +63,7 @@ export default {
     }),
     beforeMount() {
         this.calculateDist();
-        this.graphId = "#" + this.classrowdata.label.replace(/\W/g, '');
+        this.graphId = "#" + this.classrowdata.id.replace(/\W/g, '');
         this.allSections = (this.classrowdata.label == 'All Sections');
     },
     mounted() {
