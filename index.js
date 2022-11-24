@@ -9,11 +9,11 @@ const { Client } = require('pg');
 
 const DB_URL = process.env.DATABASE_URL 
   || 'postgresql://localhost:5432/boilerGrades';
-const DB_SSL = process.env.DATABASE_URL ? { rejectUnauthorized: false } : false;
+// const DB_SSL = process.env.DATABASE_URL ? { rejectUnauthorized: false } : false;
 console.log("Connecting to database at URL: %s", DB_URL);
 const client = new Client({
   connectionString: DB_URL,
-  ssl: DB_SSL
+  // ssl: DB_SSL
 });
 
 client.connect();
