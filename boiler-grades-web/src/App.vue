@@ -24,7 +24,7 @@
             download (9 MB)</a>
             . It contains
             data from all courses at the West Lafayette campus with more than 10 students
-            from Summer 2016 to Spring 2022. Some courses may not be shown if they only 
+            from Summer 2016 to Fall 2022. Some courses may not be shown if they only 
             assigned non-weighted grades (such as pass/fail).  
             </p>
             <h2>Attribution</h2>
@@ -36,7 +36,7 @@
             Wade Fagen-Ulmschneider</a>
              (from the University of Illinois), and 
             <a target="_blank" href="https://austingwalters.com/foia-requesting-100-universities/">
-            Austin G. Walters</a>. Fall 2021 and Spring 2022 data was provided by Joey Diesen.
+            Austin G. Walters</a>. Fall 2021, Spring 2022, Summer 2022, and Fall 2022 data was provided by Joey Diesen.
             </p>
             <h2>Code</h2>
             <p>This website is open source. If you'd like to report or fix a bug, 

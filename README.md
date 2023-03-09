@@ -47,6 +47,14 @@ Updating the dataset with more recent data will require filing a new [Public Rec
 
 It took about two months for Purdue to retrieve the data. Once I received the data I converted it to CSV and sanitized it with `grades.py`, then ran a `\copy` command on the output to add it to the database. If you request updated data from Purdue feel free to create an issue/pull request and I will add the additional data to the database. 
 
+## Ingesting Data (Old Way)
+1. Prepare the data in a new sheet in the excel file, removing all columns that aren't in the db table (you should verify the columns from the command in sql.commands).
+2. Save the file as a CSV 
+3. Edit and run the grades.py script on the newly created CSV. 
+4. Follow the instructions [here](https://fly.io/docs/postgres/connecting/connecting-with-flyctl/) to forward the Postgres server to your machine. The password is in a local file. 
+5. Run the `COPY grades` command from sql.commands with the appropriate file name. 
+6. Don't forget to update the website and online spreadsheet. 
+
 ## License
 This project is licensed under GNU GPL v3.
 
