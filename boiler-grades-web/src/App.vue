@@ -36,7 +36,7 @@
             Wade Fagen-Ulmschneider</a>
              (from the University of Illinois), and 
             <a target="_blank" href="https://austingwalters.com/foia-requesting-100-universities/">
-            Austin G. Walters</a>. Fall 2021, Spring 2022, Summer 2022, and Fall 2022 data was provided by Joey Diesen.
+            Austin G. Walters</a>. Fall 2021, Spring 2022, Summer 2022, and Fall 2022 data was provided by Joey Diesen. Spring 2023 data was provided by Vineet Malik.
             </p>
             <h2>Code</h2>
             <p>This website is open source. If you'd like to report or fix a bug, 
@@ -45,6 +45,7 @@
             GitHub repository</a>.
             </p>
             <p>Built with 🚂🔨 by <a target="_blank" href="https://github.com/eduxstad">eduxstad</a>.</p>
+            <p><a target="_blank" href="https://old.reddit.com/r/Purdue/comments/15xr2zr/boilerexams_application_for_fall_2023/">Join the team</a>.</p>
             </v-container>
           </v-col>
         </v-row>
