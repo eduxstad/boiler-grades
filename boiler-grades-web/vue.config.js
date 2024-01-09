@@ -1,13 +1,11 @@
 module.exports = {
-  transpileDependencies: [
-    'vuetify'
-  ],
+  transpileDependencies: ['vuetify'],
   devServer: {
     proxy: {
       '/api': {
-        target: 'https://www.boilergrades.com',
+        target: 'http://localhost:4040',
         secure: false,
       },
     },
-  }
-}
+  },
+};

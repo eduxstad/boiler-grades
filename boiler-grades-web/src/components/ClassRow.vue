@@ -1,6 +1,6 @@
 <template>
     <v-hover v-slot="{ hover }">
-    <v-container class="text-body-2 pa-0" v-bind:class="{'grey lighten-3': hover}">
+    <v-container class="text-body-2 pa-0" v-bind:class="{'grey lighten-3': hover && !$vuetify.theme.dark, 'grey darken-4': hover && $vuetify.theme.dark}">
         <v-row no-gutters class="align-center px-1" v-bind:class="{ 'font-weight-bold': allSections }">
             <v-col cols='4' sm='3' md='2'>
                 {{ classrowdata.label }}
@@ -24,6 +24,7 @@
                     ref="svgGraph"
                     v-on="on"
                     v-bind="attrs"
+                    v-bind:style="{color: $vuetify.theme.dark ? 'rgb(224, 224, 224, 0.8)' : 'rgba(108, 108, 108, 0.8)'}"
                 >
                 </div>
                 </template>
@@ -128,7 +129,7 @@ export default {
                 .attr("y", yoffset)
                 .attr("width", 3)
                 .attr("height", graphheight)
-                .attr("fill", "rgba(108, 108, 108, 0.8)");
+                .attr("fill", "currentColor");
                            
         },
         findGPA(gpa) {
@@ -221,3 +222,6 @@ export default {
     },
 }
 </script>
+
+<style scoped>
+</style>

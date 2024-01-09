@@ -14,8 +14,8 @@
         class="mb-n4"
     >
     </v-autocomplete>
-    <v-btn-toggle color="primary" >
-    <v-btn class="mx-4"  @click="clickedShowLegend" >
+    <v-btn-toggle class="mx-4">
+    <v-btn @click="clickedShowLegend" >
         Legend
     </v-btn>
     </v-btn-toggle>

@@ -1,5 +1,5 @@
 <template>
-    <v-container class="white">
+    <v-container class="" v-bind:class="{'white': !$vuetify.theme.dark, 'black': $vuetify.theme.dark}">
     <v-container>
         <v-row>
             <v-col>
