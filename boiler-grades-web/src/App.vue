@@ -17,14 +17,14 @@
               <a target="_blank" href="https://www.purdue.edu/legalcounsel/public/index.html">Public Records</a> 
               request.
               You can access the raw data 
-              <a target="_blank" href="https://purdue0-my.sharepoint.com/:x:/g/personal/eduxstad_purdue_edu/EQSIF2KgKedMhgMULoAUAv8BVcQggAN8SQwJpn9iV7jP0A?e=bPJvYS">
+              <a target="_blank" href="https://1drv.ms/x/s!AoRR9oUE-9CKkGQwLq8KAvtmSueO?e=lcf859">
               online</a>
               or via 
               <a target="_blank" href="https://github.com/eduxstad/boiler-grades/raw/main/grades.xlsx">
               download (9 MB)</a>
               . It contains
               data from all courses at the West Lafayette campus with more than 10 students
-              from Summer 2016 to Spring 2023. Some courses may not be shown if they only 
+              from Summer 2016 to Fall 2023. Some courses may not be shown if they only 
               assigned non-weighted grades (such as pass/fail).  
               </p>
               <h2>Attribution</h2>
@@ -36,7 +36,7 @@
               Wade Fagen-Ulmschneider</a>
               (from the University of Illinois), and 
               <a target="_blank" href="https://austingwalters.com/foia-requesting-100-universities/">
-              Austin G. Walters</a>. Fall 2021, Spring 2022, Summer 2022, and Fall 2022 data was provided by Joey Diesen. Spring 2023 data was provided by Vineet Malik.
+              Austin G. Walters</a>. Fall 2021, Spring 2022, Summer 2022, and Fall 2022 data was provided by Joey Diesen. Spring 2023 data was provided by Vineet Malik. Summer and Fall 2023 data was provided by Umbert Caseres.
               </p>
               <h2>Code</h2>
               <p>This website is open source. If you'd like to report or fix a bug, 
