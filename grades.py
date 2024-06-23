@@ -4,8 +4,8 @@ import json
 # ---------------
 # CONFIG SETTINGS
 # ---------------
-grades_input_csv = 'summer2023.csv'
-grades_output_csv = 'summer2023_db.csv'
+grades_input_csv = 'spring2024.csv'
+grades_output_csv = 'spring2024_db.csv'
 course_information_json = 'course_information.json'
 # ----------
 # END CONFIG

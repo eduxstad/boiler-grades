@@ -12,5 +12,6 @@ CREATE TABLE grades ( id serial, subject varchar(4), subject_desc varchar(50), c
 
 \copy grades(subject, subject_desc, course_num, title, academic_period, academic_period_desc, section, crn, instructor, a, a_minus, a_plus, au, b, b_minus, b_plus, c, c_minus, c_plus, d, d_minus, d_plus, f, i, n, p, p_i, s, s_i, u, w, w_f) FROM 'summer2023_db.csv' DELIMITER ';' CSV;
 
-
 \copy grades(academic_period_desc, subject, course_num, title,instructor, a, b, c, d, f, w, i) FROM 'fall2023.csv' DELIMITER ';' CSV;
+
+\copy grades(subject, subject_desc, course_num, title, academic_period, academic_period_desc, section, crn, instructor, a, a_minus, a_plus, au, b, b_minus, b_plus, c, c_minus, c_plus, d, d_minus, d_plus, e, f, i, n, p, p_i, s, s_i, u, w, w_f) FROM 'spring2024_db.csv' DELIMITER ';' CSV;
