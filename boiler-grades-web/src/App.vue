@@ -21,10 +21,10 @@
               online</a>
               or via 
               <a target="_blank" href="https://github.com/eduxstad/boiler-grades/raw/main/grades.xlsx">
-              download (9 MB)</a>
+              download</a>
               . It contains
               data from all courses at the West Lafayette campus with more than 10 students
-              from Summer 2016 to Fall 2023. Some courses may not be shown if they only 
+              from Summer 2016 to Fall 2024. Some courses may not be shown if they only 
               assigned non-weighted grades (such as pass/fail).  
               </p>
               <h2>Attribution</h2>
@@ -36,7 +36,7 @@
               Wade Fagen-Ulmschneider</a>
               (from the University of Illinois), and 
               <a target="_blank" href="https://austingwalters.com/foia-requesting-100-universities/">
-              Austin G. Walters</a>. Fall 2021, Spring 2022, Summer 2022, and Fall 2022 data was provided by Joey Diesen. Spring 2023 data was provided by Vineet Malik. Summer 2023, Fall 2023, and Spring 2024 data was provided by Umbert Caseres.
+              Austin G. Walters</a>. Fall 2021, Spring 2022, Summer 2022, and Fall 2022 data was provided by Joey Diesen. Spring 2023 data was provided by Vineet Malik. Summer 2023, Fall 2023, Spring 2024, and Fall 2024 data was provided by Umbert Caseres. Fall 2023 data was supplemented by Leon.
               </p>
               <h2>Code</h2>
               <p>This website is open source. If you'd like to report or fix a bug, 
@@ -45,7 +45,7 @@
               GitHub repository</a>.
               </p>
               <p>Built with 🚂🔨 by <a target="_blank" href="https://github.com/eduxstad">eduxstad</a>.</p>
-              <p><a target="_blank" href="https://old.reddit.com/r/Purdue/comments/15xr2zr/boilerexams_application_for_fall_2023/">Join the team</a>.</p>
+              <p><a target="_blank" href="https://boilerexams.com">Also try Boilerexams!</a></p>
               </v-container>
             </v-col>
           </v-row>
