@@ -3,3 +3,5 @@ package-lock.json
 grades.*
 *.secret
 .DS_Store
+.~lock.*
+course_information.json
