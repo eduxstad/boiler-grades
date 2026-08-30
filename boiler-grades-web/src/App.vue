@@ -23,7 +23,7 @@
               <a target="_blank" href="https://github.com/eduxstad/boiler-grades/raw/main/grades.xlsx">
               download</a>
               . It contains data from all courses at the West Lafayette campus with more than 10 students
-              from Summer 2016 to Fall 2025. Some courses may not be shown if they only 
+              from Summer 2016 to Spring 2026. Some courses may not be shown if they only 
               assigned non-weighted grades (such as pass/fail).  
               </p>
               <h2>Attribution</h2>
